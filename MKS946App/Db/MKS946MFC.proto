@@ -1,0 +1,31 @@
+#read flow rate
+readflow {out "@253FR\$1?;"; in "@253ACK%f;";}
+
+
+#get or set scale factr
+readscalefactor {out "@253QSF\$1?;"; in "@253ACK%f;";}
+
+setscalefactor {out "@253QSF\$1!%3.2E;"; in "@253ACK%f;";}
+
+
+# get or set scale range
+getscalerange {out "@253RNG\$1?;"; in "@253ACK%f;";}
+
+setscalerange {out "@253RNG\$1!%3.2E;"; in "@253ACK%f;";}
+
+
+# zero a MFC when the flow rate is less than %5 full scale
+
+setZero {out "@253QZ\$1!%{OK|NAK};"; in "@253ACK%{OK|NAK};";}
+
+
+#get or set setpoint
+readsetpoint {out "@253QSP\$1?;"; in "@253ACK%f;";}
+
+setpoint {out "@253QSP\$1!%3.2E;";  in "@253ACK%f;";}
+
+#get or set mode
+
+getmode {out "@253QMD\$1?;";  in "@253ACK%{OPEN|CLOSE|SETPOINT|PCTRL|RATIO|PRESET};";}
+
+setmode {out "@253QMD\$1!%{OPEN|CLOSE|SETPOINT};"; in "@253ACK%{OPEN|CLOSE|SETPOINT|PCTRL|RATIO|PRESET};";}

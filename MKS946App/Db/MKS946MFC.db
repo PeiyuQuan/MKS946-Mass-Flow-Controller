@@ -1,0 +1,122 @@
+
+record(ai,$(P)$(MFC):readflow)
+	{
+	  field(DTYP,"stream")
+	  field(DESC,"read flow rate")
+	  field(INP,"@MKS946MFC.proto readflow($(N)) $(PORT)")
+	  field(EGU,"Sccm")
+	}
+	
+
+	
+record(ai,$(P)$(MFC):readscalefactor)
+	{
+	  field(DTYP,"stream")
+	  field(INP,"@MKS946MFC.proto readscalefactor($(N)) $(PORT)")
+	  field(PREC, "1")
+	  field(HOPR, "10")
+      field(LOPR, "0.1")
+	  field(DESC,"read scale factor")
+	}
+	
+record(ao,$(P)$(MFC):setscalefactor)
+	{
+	  field(DTYP,"stream")
+	  field(OUT,"@MKS946MFC.proto setscalefactor($(N)) $(PORT)")
+	  field(PREC, "1")
+	  field(HOPR, "10")
+      field(LOPR, "0.1")
+	  field(DRVH, "10")
+      field(DRVL, "0.1")
+	  field(DESC,"set flow rate")
+	}
+	 
+	
+record(ai,$(P)$(MFC):getscalerange)
+	{
+	  field(DTYP,"stream")
+	  field(INP,"@MKS946MFC.proto getscalerange($(N)) $(PORT)")
+      field(EGU, "Sccm")
+	  field(PREC, "1")
+	  field(HOPR, "1e+6")
+	  field(LOPR, "1.0")
+	  field(DESC,"read the full scale range")
+	}
+	
+record(ao,$(P)$(MFC):setscalerange)
+	{
+	  field(DTYP,"stream")
+	  field(OUT,"@MKS946MFC.proto setscalerange($(N)) $(PORT)")
+      field(EGU, "Sccm")
+	  field(PREC, "1")
+	  field(HOPR, "1e+6")
+      field(LOPR, "1.0")
+	  field(DRVH, "1e+6")
+      field(DRVL, "1.0")
+	  field(DESC,"set the full scale range")
+	}
+	
+
+	
+record(bo,$(P)$(MFC):setzero)
+	{
+	  field(DTYP,"stream")
+	  field(OUT,"@MKS946MFC.proto setZero($(N)) $(PORT)")
+	  field(ZNAM,"Done")
+      field(ONAM,"Set zero")
+	}
+	
+record(ai,$(P)$(MFC):readsetpoint)
+	{
+	  field(DTYP,"stream")
+	  field(INP,"@MKS946MFC.proto readsetpoint($(N)) $(PORT)")
+	  field(PREC, "1")
+	  field(DESC,"read setpoint")
+	}
+	
+record(ao,$(P)$(MFC):setpoint)
+	{
+	  field(DTYP,"stream")
+	  field(OUT,"@MKS946MFC.proto setpoint($(N)) $(PORT)")
+	  field(PREC, "1")
+	  field(DESC,"set setpoint")
+	}
+
+record(mbbi,$(P)$(MFC):getmode)
+	{
+	  field(DTYP, "stream")
+      field(INP, "@MKS946MFC.proto getmode($(N)) $(PORT)")
+      field(ZRVL, "0")
+      field(ZRST, "OPEN")
+      field(ONVL, "1")
+      field(ONST, "CLOSE")
+      field(TWVL, "2")
+      field(TWST,"SETPONTS")
+      field(THVL, "3")
+      field(THST,"PCTRL")
+      field(FRVL, "4")
+      field(FRST,"RATIO")
+      field(FVVL, "5")
+      field(FVST,"PRESET")
+	  field(DESC,"read mode")
+	}
+
+record(mbbo,$(P)$(MFC):setmode)
+	{
+	  field(DTYP, "stream")
+      field(OUT, "@MKS946MFC.proto setmode($(N)) $(PORT)")
+      field(ZRVL, "0")
+      field(ZRST, "OPEN")
+      field(ONVL, "1")
+      field(ONST, "CLOSE")
+      field(TWVL, "2")
+      field(TWST,"SETPONTS")
+      field(THVL, "3")
+      field(THST,"PCTRL")
+      field(FRVL, "4")
+      field(FRST,"RATIO")
+      field(FVVL, "5")
+      field(FVST,"PRESET")
+	  field(DESC,"set mode")
+	}
+	
