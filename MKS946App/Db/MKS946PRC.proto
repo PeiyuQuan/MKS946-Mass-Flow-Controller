@@ -1,0 +1,8 @@
+#read pressure on channel n
+
+readpressure { out "@253PR\$1?;"; in "@253ACK%f;"; @mismatch {in "@253ACK%{\?.|  \?E|OVER|ATM|<1.00E-11|RP_OFF|OFF|WAIT|L|CTRL_OFF|PROT_OFF|NOGAUGE|MISCONN|NOT|Not|C};";} }
+
+#readpressure { out "@253PR\$1?;"; in "@253ACK/%f"; @mismatch {in "@253ACK%(UWXRD:MKS946:prc1:STA){\?.|  \?E|OVER|ATM|<1.00E-11|RP_OFF|OFF|WAIT|L|CTRL_OFF|PROT_OFF|NOGAUGE|MISCONN|NOT|Not|C};";} }
+
+
+
