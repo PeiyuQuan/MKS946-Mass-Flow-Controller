@@ -12,18 +12,24 @@ dbLoadDatabase "dbd/MKS946.dbd"
 MKS946_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
-dbLoadTemplate "db/user.substitutions"
-dbLoadRecords "db/MKS946Version.db", "user=quan"
-dbLoadRecords "db/dbSubExample.db", "user=quan"
+drvAsynSerialPortConfigure("serial1", "/dev/ttyUSB", 0, 0, 0)
+asynOctetSetInputEos("serial1",0,"FF")
+asynOctetSetOutputEos("serial1",0,"FF")
+asynSetOption("serial1",0,"baud","115200")
+asynSetOption("serial1",0,"bits","8")
+asynSetOption("serial1",0,"stop","1")
+asynSetOption("serial1",0,"parity","none")
+asynSetOption("serial1",0,"clocal","Y")
+asynSetOption("serial1",0,"crtscts","N")
 
-#- Set this to see messages from mySub
-#var mySubDebug 1
+dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc1,N=1")
+dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc2,N=2")
+dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc3,N=3")
 
-#- Run this to trace the stages of iocInit
-#traceIocInit
+asynSetTraceIOMask("serial1",0,2)
+asynSetTraceMask("serial1",0,9)
+
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 
-## Start any sequence programs
-#seq sncExample, "user=quan"
