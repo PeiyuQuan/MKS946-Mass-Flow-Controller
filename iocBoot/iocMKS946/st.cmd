@@ -25,7 +25,7 @@ asynSetOption("serial1",0,"crtscts","N")
 dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc1,N=1")
 dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc2,N=2")
 dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc3,N=3")
-#dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,PRC=prc1,N=1")
+#dbLoadRecords("$(IP)/db/MKS946PRC.db","P=$(PREFIX),PORT=serial1,PRC=prc1,N=1")
 
 asynSetTraceIOMask("serial1",0,2)
 asynSetTraceMask("serial1",0,9)
