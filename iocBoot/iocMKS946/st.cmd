@@ -11,6 +11,10 @@ cd "${TOP}"
 dbLoadDatabase "dbd/MKS946.dbd"
 MKS946_registerRecordDeviceDriver pdbbase
 
+epicsEnvSet ("STREAM_PROTOCOL_PATH", "${TOP}/MKS946App/Db")
+epicsEnvSet ("PREFIX", "SLAC:MKS946:")
+epicsEnvSet ("PORT", "serial1")
+
 ## Load record instances
 drvAsynSerialPortConfigure("serial1", "/dev/ttyUSB", 0, 0, 0)
 asynOctetSetInputEos("serial1",0,"FF")
