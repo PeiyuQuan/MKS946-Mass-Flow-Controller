@@ -51,8 +51,6 @@ record(ao,$(P)$(MFC):setscalerange)
 	  field(PREC, "1")
 	  field(HOPR, "200")
       field(LOPR, "10.0")
-#	  field(DRVH, "1e+6")
-#      field(DRVL, "1.0")
 	  field(DESC,"set the full scale range")
 	}
 	
