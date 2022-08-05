@@ -4,7 +4,7 @@ record(ai,$(P)$(MFC):readflow)
 	  field(DTYP,"stream")
 	  field(DESC,"read flow rate")
 	  field(INP,"@MKS946MFC.proto readflow($(N)) $(PORT)")
-	  field(EGU,"Sccm")
+	  field(EGU,"SCCM")
 	}
 	
 
@@ -13,7 +13,7 @@ record(ai,$(P)$(MFC):readscalefactor)
 	{
 	  field(DTYP,"stream")
 	  field(INP,"@MKS946MFC.proto readscalefactor($(N)) $(PORT)")
-	  field(PREC, "1")
+	  field(PREC, "2")
 	  field(HOPR, "10")
       field(LOPR, "0.1")
 	  field(DESC,"read scale factor")
@@ -23,7 +23,7 @@ record(ao,$(P)$(MFC):setscalefactor)
 	{
 	  field(DTYP,"stream")
 	  field(OUT,"@MKS946MFC.proto setscalefactor($(N)) $(PORT)")
-	  field(PREC, "1")
+	  field(PREC, "2")
 	  field(HOPR, "10")
       field(LOPR, "0.1")
 	  field(DRVH, "10")
@@ -36,10 +36,10 @@ record(ai,$(P)$(MFC):getscalerange)
 	{
 	  field(DTYP,"stream")
 	  field(INP,"@MKS946MFC.proto getscalerange($(N)) $(PORT)")
-      field(EGU, "Sccm")
+      field(EGU, "SCCM")
 	  field(PREC, "1")
-	  field(HOPR, "1e+6")
-	  field(LOPR, "1.0")
+	  field(HOPR, "200")
+	  field(LOPR, "10.0")
 	  field(DESC,"read the full scale range")
 	}
 	
@@ -47,12 +47,12 @@ record(ao,$(P)$(MFC):setscalerange)
 	{
 	  field(DTYP,"stream")
 	  field(OUT,"@MKS946MFC.proto setscalerange($(N)) $(PORT)")
-      field(EGU, "Sccm")
+      field(EGU, "SCCM")
 	  field(PREC, "1")
-	  field(HOPR, "1e+6")
-      field(LOPR, "1.0")
-	  field(DRVH, "1e+6")
-      field(DRVL, "1.0")
+	  field(HOPR, "200")
+      field(LOPR, "10.0")
+#	  field(DRVH, "1e+6")
+#      field(DRVL, "1.0")
 	  field(DESC,"set the full scale range")
 	}
 	
