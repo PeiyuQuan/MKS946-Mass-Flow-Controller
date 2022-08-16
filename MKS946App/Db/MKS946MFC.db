@@ -4,6 +4,7 @@ record(ai,$(P)$(MFC):readflow)
 	  field(DTYP,"stream")
 	  field(DESC,"read flow rate")
 	  field(INP,"@MKS946MFC.proto readflow($(N)) $(PORT)")
+	  field(SCAN,"1 second")
 	  field(EGU,"SCCM")
 	}
 	
@@ -16,6 +17,7 @@ record(ai,$(P)$(MFC):readscalefactor)
 	  field(PREC, "2")
 	  field(HOPR, "10")
       field(LOPR, "0.1")
+      field(SCAN,"1 second")
 	  field(DESC,"read scale factor")
 	}
 	
@@ -40,6 +42,7 @@ record(ai,$(P)$(MFC):getscalerange)
 	  field(PREC, "1")
 	  field(HOPR, "200")
 	  field(LOPR, "10.0")
+	  field(SCAN,"1 second")
 	  field(DESC,"read the full scale range")
 	}
 	
@@ -69,6 +72,7 @@ record(ai,$(P)$(MFC):readsetpoint)
 	  field(DTYP,"stream")
 	  field(INP,"@MKS946MFC.proto readsetpoint($(N)) $(PORT)")
 	  field(PREC, "1")
+	  field(SCAN,"1 second")
 	  field(DESC,"read setpoint")
 	}
 	
@@ -96,6 +100,7 @@ record(mbbi,$(P)$(MFC):getmode)
       field(FRST,"RATIO")
       field(FVVL, "5")
       field(FVST,"PRESET")
+      field(SCAN,"1 second")
 	  field(DESC,"read mode")
 	}
 
