@@ -33,6 +33,8 @@ dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc3,N=3")
 #dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc5,N=5")
 #dbLoadRecords("$(IP)/db/MKS946MFC.db","P=$(PREFIX),PORT=serial1,MFC=mfc6,N=6")
 #dbLoadRecords("$(IP)/db/MKS946PRC.db","P=$(PREFIX),PORT=serial1,PRC=prc1,N=1")
+#dbLoadRecords("$(IP)/db/MKS946PRC.db","P=$(PREFIX),PORT=serial1,PRC=prc2,N=2")
+#dbLoadRecords("$(IP)/db/MKS946PRC.db","P=$(PREFIX),PORT=serial1,PRC=prc3,N=3")
 
 asynSetTraceIOMask("serial1",0,2)
 asynSetTraceMask("serial1",0,9)
