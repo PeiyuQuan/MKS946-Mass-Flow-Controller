@@ -5,6 +5,7 @@ record(ai,$(P)$(MFC):readflow)
 	  field(DESC,"read flow rate")
 	  field(INP,"@MKS946MFC.proto readflow($(N)) $(PORT)")
 	  field(SCAN,"1 second")
+	  field(PREC, "2")
 	  field(EGU,"SCCM")
 	}
 	
