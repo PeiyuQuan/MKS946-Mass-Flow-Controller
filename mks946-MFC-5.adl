@@ -1,0 +1,1570 @@
+
+file {
+	name="C:\Users\Evans\Desktop\epics\adls\MFC-5.adl"
+	version=030109
+}
+display {
+	object {
+		x=31
+		y=476
+		width=1020
+		height=410
+	}
+	clr=14
+	bclr=62
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=150
+		y=25
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="MFC1"
+}
+text {
+	object {
+		x=15
+		y=45
+		width=70
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Flow rate"
+}
+text {
+	object {
+		x=240
+		y=45
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=425
+		y=45
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=610
+		y=45
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=450
+		y=7
+		width=140
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Mass Flow controller"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=130
+		y=45
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC1)readflow"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=360
+		y=25
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="MFC2"
+}
+"text update" {
+	object {
+		x=315
+		y=45
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC2)readflow"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+polyline {
+	object {
+		x=275
+		y=25
+		width=0
+		height=385
+	}
+	"basic attribute" {
+		clr=14
+	}
+	"dynamic attribute" {
+		chan="$(P)$(mfc2):readflow"
+	}
+	points {
+		(275,25)
+		(275,410)
+	}
+}
+polyline {
+	object {
+		x=460
+		y=25
+		width=0
+		height=385
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(460,25)
+		(460,410)
+	}
+}
+polyline {
+	object {
+		x=90
+		y=25
+		width=0
+		height=384
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(90,25)
+		(90,409)
+	}
+}
+text {
+	object {
+		x=530
+		y=25
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="MFC3"
+}
+polyline {
+	object {
+		x=645
+		y=25
+		width=0
+		height=385
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(645,25)
+		(645,410)
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=45
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC3)readflow"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=20
+		y=150
+		width=67
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Read SP"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=20
+		y=170
+		width=63
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Set Point"
+	align="horiz. centered"
+}
+polyline {
+	object {
+		x=0
+		y=135
+		width=1020
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(0,135)
+		(1020,135)
+	}
+}
+polyline {
+	object {
+		x=0
+		y=205
+		width=1020
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(0,205)
+		(1020,205)
+	}
+}
+text {
+	object {
+		x=20
+		y=220
+		width=66
+		height=24
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Read SR"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=20
+		y=245
+		width=65
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Set Scale"
+	align="horiz. centered"
+}
+polyline {
+	object {
+		x=0
+		y=280
+		width=1020
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(0,280)
+		(1020,280)
+	}
+}
+text {
+	object {
+		x=11
+		y=290
+		width=72
+		height=26
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Read mode"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=14
+		y=325
+		width=65
+		height=25
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Set mode"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=15
+		y=370
+		width=70
+		height=25
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Set zero"
+	align="horiz. centered"
+}
+polyline {
+	object {
+		x=0
+		y=360
+		width=1020
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+	}
+	"dynamic attribute" {
+		chan="$(P)$(mfc3):setzero"
+	}
+	points {
+		(0,360)
+		(1020,360)
+	}
+}
+polyline {
+	object {
+		x=0
+		y=70
+		width=1020
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(0,70)
+		(1020,70)
+	}
+}
+text {
+	object {
+		x=19
+		y=75
+		width=65
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Read SF"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=15
+		y=95
+		width=66
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Set Scale"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=130
+		y=75
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC1)readscalefactor"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=130
+		y=105
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC1)setscalefactor"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=315
+		y=75
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC2)readscalefactor"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=315
+		y=105
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC2)setscalefactor"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=75
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC3)readscalefactor"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=500
+		y=105
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC3)setscalefactor"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=130
+		y=145
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC1)readsetpoint"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=240
+		y=145
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+"text entry" {
+	object {
+		x=130
+		y=170
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC1)setpoint"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=240
+		y=175
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+"text update" {
+	object {
+		x=315
+		y=145
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC2)readsetpoint"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=425
+		y=145
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=315
+		y=170
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC2)setpoint"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=425
+		y=175
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+"text update" {
+	object {
+		x=500
+		y=145
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC3)readsetpoint"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=610
+		y=145
+		width=32
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+	align="horiz. centered"
+}
+"text entry" {
+	object {
+		x=500
+		y=170
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC3)setpoint"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=610
+		y=175
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+"text entry" {
+	object {
+		x=97
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC1)setscalerange.HOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=186
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC1)setscalerange.LOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=97
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC1)getscalerange.HOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=186
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC1)getscalerange.LOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=285
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC2)setscalerange.HOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=375
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC2)setscalerange.LOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=285
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC2)getscalerange.HOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=373
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC2)getscalerange.LOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=560
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC3)setscalerange.LOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=470
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC3)setscalerange.HOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=560
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC3)getscalerange.LOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=470
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC3)getscalerange.HOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=500
+		y=290
+		width=100
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC3)getmode"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=315
+		y=290
+		width=100
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC2)getmode"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=130
+		y=290
+		width=100
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC1)getmode"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+menu {
+	object {
+		x=130
+		y=325
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC1)setmode"
+		clr=14
+		bclr=41
+	}
+}
+menu {
+	object {
+		x=315
+		y=325
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC2)setmode"
+		clr=14
+		bclr=41
+	}
+}
+menu {
+	object {
+		x=500
+		y=325
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC3)setmode"
+		clr=14
+		bclr=41
+	}
+}
+"message button" {
+	object {
+		x=128
+		y=370
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC1)setzero"
+		clr=14
+		bclr=22
+	}
+	label="1"
+}
+"message button" {
+	object {
+		x=315
+		y=370
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC2)setzero"
+		clr=14
+		bclr=22
+	}
+	label="1"
+}
+"message button" {
+	object {
+		x=500
+		y=370
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC3)setzero"
+		clr=14
+		bclr=22
+	}
+	label="1"
+}
+text {
+	object {
+		x=30
+		y=255
+		width=46
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Range"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=25
+		y=108
+		width=47
+		height=19
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Factor"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=685
+		y=45
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC4)readflow"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=870
+		y=45
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC5)readflow"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=790
+		y=45
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=975
+		y=45
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=790
+		y=145
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=790
+		y=175
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=975
+		y=150
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+text {
+	object {
+		x=975
+		y=175
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="SCCM"
+}
+"text update" {
+	object {
+		x=685
+		y=75
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC4)readscalefactor"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=870
+		y=75
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC5)readscalefactor"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=685
+		y=145
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC4)readsetpoint"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=870
+		y=145
+		width=100
+		height=20
+	}
+	monitor {
+		chan="$(P)$(MFC5)readsetpoint"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=652
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC4)getscalerange.HOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=840
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC5)getscalerange.HOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=744
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC4)getscalerange.LOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=930
+		y=215
+		width=80
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC5)getscalerange.LOPR"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+polyline {
+	object {
+		x=830
+		y=25
+		width=0
+		height=385
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(830,25)
+		(830,410)
+	}
+}
+"text entry" {
+	object {
+		x=685
+		y=105
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC4)setscalefactor"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=870
+		y=105
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC5)setscalefactor"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=685
+		y=170
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC4)setpoint"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=870
+		y=170
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC5)setpoint"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=651
+		y=246
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC4)setscalerange.HOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=744
+		y=246
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC4)setscalerange.HOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=841
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC5)setscalerange.HOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=930
+		y=245
+		width=80
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC5)setscalerange.HOPR"
+		clr=14
+		bclr=30
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=685
+		y=290
+		width=100
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC4)getmode"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=870
+		y=290
+		width=100
+		height=25
+	}
+	monitor {
+		chan="$(P)$(MFC5)getmode"
+		clr=14
+		bclr=20
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+menu {
+	object {
+		x=685
+		y=325
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC4)setmode"
+		clr=14
+		bclr=41
+	}
+}
+menu {
+	object {
+		x=870
+		y=325
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC5)setmode"
+		clr=14
+		bclr=41
+	}
+}
+"message button" {
+	object {
+		x=685
+		y=370
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC4)setzero"
+		clr=14
+		bclr=22
+	}
+	label="1"
+}
+"message button" {
+	object {
+		x=870
+		y=370
+		width=100
+		height=25
+	}
+	control {
+		chan="$(P)$(MFC5)setzero"
+		clr=14
+		bclr=22
+	}
+	label="1"
+}
+text {
+	object {
+		x=719
+		y=25
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="MFC4"
+}
+text {
+	object {
+		x=899
+		y=21
+		width=30
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="MFC5"
+}
