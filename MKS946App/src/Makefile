@@ -55,7 +55,6 @@ MKS946_DBD += drvAsynSerialPort.dbd
 MKS946_DBD += calc.dbd
 MKS946_DBD += stream-scalcout.dbd
 MKS946_DBD += stream.dbd
-MKS946_DBD += as.dbd
 MKS946_DBD += asSupport.dbd
 
 # MKS946_registerRecordDeviceDriver.cpp derives from MKS946.dbd
